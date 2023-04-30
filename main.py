@@ -1,0 +1,20 @@
+import random
+k=0
+while(k!=1):
+    l1=[0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+    l3=[4,6]
+    s=''
+    k=random.choice(l3)
+    for i in range(k):
+        t=random.choice(l1)
+        s+=str(t)
+    print('please enter the captcha given below:')    
+    print(s.rjust(20))    
+    print('captcha is case sensitive'.rjust(50))
+    s1=input()
+    if s1==s:
+        k=1
+        print('Authentication completed')
+    else:
+        print('Wrong captcha')
+    
